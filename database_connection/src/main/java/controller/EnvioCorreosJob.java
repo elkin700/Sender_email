@@ -16,7 +16,7 @@ public class EnvioCorreosJob implements Job {
     public void execute(JobExecutionContext context) throws JobExecutionException {
 
         try {
-            emailSender = new Correo("elkinvasquez1013@gmail.com", "rmjjvdzjtzurvmbe", "smtp.tu-servidor-smtp.com", 587);
+            emailSender = new Correo("'EMAIL'", "'PASSWORD'", "smtp.tu-servidor-smtp.com", 587);
             databaseConnector = new ConexionBD("jdbc:mysql://127.0.0.1:3306/Datos_clientes_suscripcion", "user", "password");
 
             Controlador controlador = new Controlador(emailSender, databaseConnector);
